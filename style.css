@@ -1623,3 +1623,818 @@ footer{
 .fund-btn span{display:flex;flex-direction:column;gap:2px}
 .fund-btn span b{font-size:.61rem;font-weight:700;color:#9d6c22}
 .fund-btn.active span b,.fund-btn:hover span b{color:#f1cf7d}
+
+
+/* =========================================================
+   FINAL INVESTMENT HERO — MATCH APPROVED VISUAL
+   ========================================================= */
+.vc-hero.vc-hero-premium{
+  max-width:1320px;
+  margin:0 auto 70px;
+  grid-template-columns:.95fr 1.05fr;
+  gap:58px;
+  padding:66px 72px;
+  min-height:590px;
+  align-items:center;
+  background:
+    radial-gradient(circle at 94% 3%,rgba(209,163,77,.10),transparent 28%),
+    linear-gradient(135deg,#fffaf4 0%,#f9eee4 100%);
+  border:1px solid #d9aa55;
+  border-radius:28px;
+  box-shadow:0 18px 46px rgba(86,51,32,.08);
+  overflow:hidden;
+}
+.vc-hero.vc-hero-premium:after{
+  width:430px;
+  height:430px;
+  right:-150px;
+  top:-180px;
+  border-color:rgba(211,163,63,.13);
+}
+.vc-hero-premium .vc-hero-copy{
+  position:relative;
+  z-index:2;
+}
+.vc-hero-premium .vc-kicker{
+  color:#a96f20;
+  font-size:.76rem;
+  letter-spacing:.20em;
+  font-weight:800;
+}
+.vc-kicker-ornament{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  width:380px;
+  max-width:100%;
+  margin:11px 0 32px;
+}
+.vc-kicker-ornament span{
+  height:1px;
+  background:#d4aa60;
+  flex:1;
+}
+.vc-kicker-ornament svg{
+  width:34px;
+  height:29px;
+  fill:none;
+  stroke:#d2a04a;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.vc-hero-premium .vc-hero-copy h2{
+  font-size:clamp(3.1rem,5vw,5.15rem);
+  line-height:.93;
+  letter-spacing:-.035em;
+  color:#351719;
+  margin:0;
+}
+.vc-hero-premium .vc-hero-copy h2 span{
+  display:inline-block;
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:700;
+  font-size:.76em;
+  letter-spacing:-.02em;
+  color:#881017;
+  margin-bottom:.15em;
+}
+.vc-title-accent{
+  width:48px;
+  height:3px;
+  border-radius:3px;
+  background:#cc973c;
+  margin:20px 0 25px;
+}
+.vc-hero-premium .vc-hero-copy>p{
+  max-width:510px;
+  color:#4c403b;
+  font-size:.93rem;
+  line-height:1.7;
+  margin:0;
+}
+.vc-hero-premium .vc-chip-row{
+  display:grid;
+  grid-template-columns:max-content max-content;
+  gap:10px 12px;
+  margin-top:30px;
+}
+.vc-hero-premium .vc-chip-row span{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid #e2bd79;
+  background:rgba(255,253,249,.74);
+  color:#493a35;
+  padding:.55rem .82rem;
+  border-radius:999px;
+  font-size:.67rem;
+  box-shadow:0 3px 10px rgba(121,83,51,.03);
+}
+.vc-hero-premium .vc-chip-row svg{
+  width:20px;
+  height:20px;
+  fill:none;
+  stroke:#d09b3e;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  flex:0 0 auto;
+}
+
+.vc-hero-metrics-premium{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  align-content:center;
+  position:relative;
+  z-index:2;
+}
+.vc-hero-metrics-premium article{
+  min-height:204px;
+  background:rgba(255,253,249,.95);
+  border:1px solid #ecd9c1;
+  border-radius:20px;
+  padding:27px 28px 24px;
+  box-shadow:0 14px 31px rgba(78,42,30,.07);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.vc-hero-metrics-premium article:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 36px rgba(78,42,30,.11);
+  border-color:#dfbd81;
+}
+.metric-head{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.metric-icon{
+  width:62px;
+  height:62px;
+  flex:0 0 62px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#f6e8e8;
+  color:#911119;
+}
+.metric-icon svg{
+  width:34px;
+  height:34px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.vc-hero-metrics-premium small{
+  display:block;
+  color:#4e4641;
+  font-size:.69rem;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  margin-bottom:5px;
+}
+.vc-hero-metrics-premium strong{
+  display:block;
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:1.88rem;
+  line-height:1;
+  color:#841017;
+  margin:0;
+}
+.metric-line{
+  width:45px;
+  height:2px;
+  background:#d09a3e;
+  margin:22px 0 17px;
+}
+.vc-hero-metrics-premium p{
+  font-size:.72rem;
+  color:#4c4642;
+  line-height:1.5;
+  margin:0;
+}
+
+/* Tablet */
+@media(max-width:1050px){
+  .vc-hero.vc-hero-premium{
+    grid-template-columns:1fr;
+    padding:52px 44px;
+    gap:42px;
+  }
+  .vc-hero-premium .vc-hero-copy{
+    max-width:680px;
+  }
+  .vc-hero-metrics-premium{
+    width:100%;
+  }
+}
+
+/* Mobile */
+@media(max-width:680px){
+  .vc-hero.vc-hero-premium{
+    padding:34px 22px;
+    min-height:0;
+    border-radius:22px;
+  }
+  .vc-kicker-ornament{
+    width:280px;
+    margin-bottom:24px;
+  }
+  .vc-hero-premium .vc-hero-copy h2{
+    font-size:clamp(2.65rem,12vw,3.6rem);
+  }
+  .vc-hero-premium .vc-chip-row{
+    grid-template-columns:1fr;
+  }
+  .vc-hero-premium .vc-chip-row span{
+    width:100%;
+  }
+  .vc-hero-metrics-premium{
+    grid-template-columns:1fr;
+  }
+  .vc-hero-metrics-premium article{
+    min-height:0;
+    padding:23px;
+  }
+}
+
+
+/* =========================================================
+   INVESTMENT HERO TYPOGRAPHY — MATCH APPROVED VISUAL
+   ========================================================= */
+
+/* Main title: clean modern sans serif */
+.vc-hero-premium .vc-hero-copy h2{
+  font-family:Inter, Arial, sans-serif !important;
+  font-weight:700 !important;
+  font-size:clamp(3rem,4.55vw,4.75rem) !important;
+  line-height:.98 !important;
+  letter-spacing:-.04em !important;
+  color:#351719 !important;
+}
+
+/* ₹20 Crore: elegant serif used elsewhere in the Brazora site */
+.vc-hero-premium .vc-hero-copy h2 span{
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  font-weight:700 !important;
+  font-size:.78em !important;
+  line-height:1 !important;
+  letter-spacing:-.025em !important;
+  color:#881017 !important;
+}
+
+/* Metric values use the same premium serif */
+.vc-hero-metrics-premium strong{
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  font-weight:700 !important;
+  font-size:2rem !important;
+  letter-spacing:-.025em !important;
+  white-space:nowrap !important;
+}
+
+/* Keep card labels and descriptions clean and modern */
+.vc-hero-metrics-premium small,
+.vc-hero-metrics-premium p,
+.vc-hero-premium .vc-chip-row span,
+.vc-hero-premium .vc-hero-copy>p{
+  font-family:Inter, Arial, sans-serif !important;
+}
+
+/* Give the metric content slightly more room so values stay on one line */
+.vc-hero.vc-hero-premium{
+  grid-template-columns:.9fr 1.1fr !important;
+}
+.vc-hero-metrics-premium article{
+  padding-left:24px !important;
+  padding-right:24px !important;
+}
+.metric-head{
+  gap:14px !important;
+}
+.metric-icon{
+  width:58px !important;
+  height:58px !important;
+  flex-basis:58px !important;
+}
+
+/* Tablet / mobile */
+@media(max-width:1050px){
+  .vc-hero.vc-hero-premium{
+    grid-template-columns:1fr !important;
+  }
+}
+@media(max-width:680px){
+  .vc-hero-premium .vc-hero-copy h2{
+    font-size:clamp(2.5rem,11vw,3.45rem) !important;
+  }
+  .vc-hero-metrics-premium strong{
+    font-size:1.85rem !important;
+  }
+}
+
+
+/* =========================================================
+   APPROVED INVESTMENT HERO — FINAL TYPOGRAPHY + DUPLICATE FIX
+   ========================================================= */
+
+/* Reference visual uses a classic high-contrast serif for all currency values. */
+.vc-hero-premium .vc-hero-copy h2 span,
+.vc-hero-metrics-premium strong{
+  font-family:"Playfair Display", Georgia, "Times New Roman", serif !important;
+  font-weight:700 !important;
+  font-style:normal !important;
+}
+
+/* ₹20 Crore should be prominent, but clearly smaller than Investment Ask. */
+.vc-hero-premium .vc-hero-copy h2 span{
+  font-size:.70em !important;
+  line-height:1 !important;
+  letter-spacing:-.035em !important;
+  color:#881017 !important;
+}
+
+/* Main wording follows the clean bold sans-serif treatment in the approved image. */
+.vc-hero-premium .vc-hero-copy h2{
+  font-family:Inter, Arial, Helvetica, sans-serif !important;
+  font-weight:700 !important;
+  font-style:normal !important;
+  font-size:clamp(3rem,4.6vw,4.7rem) !important;
+  line-height:.96 !important;
+  letter-spacing:-.045em !important;
+  color:#351719 !important;
+}
+
+/* Right-side values use the same serif as ₹20 Crore. */
+.vc-hero-metrics-premium strong{
+  font-size:1.85rem !important;
+  line-height:1.06 !important;
+  letter-spacing:-.035em !important;
+  white-space:nowrap !important;
+}
+
+/* Keep labels / body typography clean, matching the reference. */
+.vc-hero-premium .vc-kicker,
+.vc-hero-premium .vc-hero-copy>p,
+.vc-hero-premium .vc-chip-row span,
+.vc-hero-metrics-premium small,
+.vc-hero-metrics-premium p{
+  font-family:Inter, Arial, Helvetica, sans-serif !important;
+}
+
+/* Prevent any old non-premium metric block from rendering if cached markup survives. */
+.vc-hero-premium + .vc-hero-metrics{
+  display:none !important;
+}
+
+@media(max-width:680px){
+  .vc-hero-premium .vc-hero-copy h2{
+    font-size:clamp(2.5rem,11vw,3.4rem) !important;
+  }
+  .vc-hero-metrics-premium strong{
+    font-size:1.72rem !important;
+  }
+}
+
+
+/* =========================================================
+   STRATEGIC GROWTH OPPORTUNITY — CENTERED FINAL LAYOUT
+   ========================================================= */
+
+/* Turn the premium hero into one centered presentation deck. */
+.vc-hero.vc-hero-premium{
+  display:block !important;
+  max-width:1600px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  padding:58px 58px 48px !important;
+}
+
+/* Center the heading and introductory statement above the four cards. */
+.vc-hero-premium .vc-hero-copy{
+  width:100% !important;
+  max-width:none !important;
+  text-align:center !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+}
+
+.vc-hero-premium .vc-kicker{
+  margin:0 auto 22px !important;
+  text-align:center !important;
+  justify-content:center !important;
+  width:100% !important;
+  font-size:1rem !important;
+  letter-spacing:.22em !important;
+}
+
+/* Decorative gold rule around the centered section heading. */
+.vc-hero-premium .vc-kicker::before,
+.vc-hero-premium .vc-kicker::after{
+  content:"" !important;
+  display:inline-block !important;
+  width:145px !important;
+  height:1px !important;
+  background:#d6a13d !important;
+  margin:0 22px !important;
+  vertical-align:middle !important;
+}
+
+/* Intro copy sits immediately under the heading and above cards. */
+.vc-hero-premium .vc-hero-copy>p{
+  max-width:860px !important;
+  margin:0 auto 42px !important;
+  text-align:center !important;
+  font-size:1.15rem !important;
+  line-height:1.65 !important;
+  color:#4b3a36 !important;
+}
+
+/* Four cards in one aligned row. */
+.vc-hero-metrics-premium{
+  width:100% !important;
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:28px !important;
+  margin:0 auto !important;
+}
+
+.vc-hero-metrics-premium article{
+  min-height:330px !important;
+  padding:30px 28px !important;
+  text-align:center !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+}
+
+.vc-hero-metrics-premium .metric-head{
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:16px !important;
+  width:100% !important;
+}
+
+.vc-hero-metrics-premium small,
+.vc-hero-metrics-premium strong,
+.vc-hero-metrics-premium p{
+  text-align:center !important;
+}
+
+.vc-hero-metrics-premium strong{
+  font-size:2rem !important;
+  white-space:nowrap !important;
+}
+
+/* Gold separator centered in each card. */
+.vc-hero-metrics-premium article::after{
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* Theme pills become one centered row below the cards. */
+.vc-hero-premium .vc-chip-row{
+  width:100% !important;
+  display:flex !important;
+  justify-content:center !important;
+  flex-wrap:wrap !important;
+  gap:16px !important;
+  margin:34px auto 0 !important;
+}
+
+/* Responsive handling */
+@media(max-width:1100px){
+  .vc-hero-metrics-premium{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+  .vc-hero-premium .vc-kicker::before,
+  .vc-hero-premium .vc-kicker::after{
+    width:90px !important;
+  }
+}
+
+@media(max-width:680px){
+  .vc-hero.vc-hero-premium{
+    padding:38px 20px 34px !important;
+  }
+  .vc-hero-metrics-premium{
+    grid-template-columns:1fr !important;
+  }
+  .vc-hero-premium .vc-kicker{
+    font-size:.82rem !important;
+    letter-spacing:.16em !important;
+  }
+  .vc-hero-premium .vc-kicker::before,
+  .vc-hero-premium .vc-kicker::after{
+    width:35px !important;
+    margin:0 10px !important;
+  }
+  .vc-hero-premium .vc-hero-copy>p{
+    font-size:1rem !important;
+    margin-bottom:30px !important;
+  }
+}
+
+/* FINAL REFERENCE MATCH — 24 AUG 2026 */
+.vc-hero.vc-hero-premium{padding:42px 44px 34px!important;border:1px solid #e3b75e!important;background:radial-gradient(circle at 94% 8%,rgba(218,171,91,.12),transparent 27%),linear-gradient(135deg,#fffaf3 0%,#fbf1e5 100%)!important}
+.vc-hero-premium .vc-top-emblem{width:44px;height:38px;margin:0 auto 12px;color:#d39b32}.vc-hero-premium .vc-top-emblem svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.8}
+.vc-hero-premium .vc-kicker{display:flex!important;align-items:center!important;justify-content:center!important;gap:26px!important;margin:0 auto 24px!important;color:#ad6c0a!important;font-size:1.05rem!important;font-weight:700!important;letter-spacing:.24em!important}
+.vc-hero-premium .vc-kicker:before,.vc-hero-premium .vc-kicker:after{content:""!important;width:190px!important;height:1px!important;margin:0!important;background:#d6a13d!important;display:block!important;flex:0 1 190px!important}
+.vc-hero-premium .vc-hero-copy>p{max-width:760px!important;margin:0 auto 42px!important;font-size:1.12rem!important;line-height:1.65!important;color:#382d2a!important}
+.vc-hero-metrics-premium{gap:26px!important}.vc-hero-metrics-premium article{min-height:300px!important;padding:30px 24px 26px!important;border-radius:24px!important;background:rgba(255,255,255,.78)!important;box-shadow:0 12px 28px rgba(89,48,30,.06)!important}
+.vc-hero-metrics-premium .metric-icon{width:78px!important;height:78px!important;border-radius:50%!important;background:#f6e5e7!important;display:grid!important;place-items:center!important}.vc-hero-metrics-premium .metric-icon svg{width:42px!important;height:42px!important;fill:none!important;stroke:#9d1118!important;stroke-width:1.8!important}
+.vc-hero-metrics-premium small{font-size:.92rem!important;letter-spacing:.08em!important;color:#3e3b3a!important}.vc-hero-metrics-premium strong{font-family:"Playfair Display",Georgia,serif!important;color:#8f0c12!important;font-size:2.15rem!important;margin-top:12px!important}.vc-hero-metrics-premium .metric-line{width:58px!important;height:2px!important;background:#d39b32!important;margin:22px auto 18px!important}.vc-hero-metrics-premium p{font-size:.98rem!important;line-height:1.45!important;color:#4d4947!important;margin:auto 0 0!important}
+.vc-hero-premium .vc-chip-row{order:initial!important;margin:34px auto 0!important;gap:18px!important}.vc-hero-premium .vc-chip-row span{min-width:220px!important;justify-content:center!important;padding:11px 18px!important;border:1px solid #e1b767!important;border-radius:999px!important;background:rgba(255,255,255,.52)!important;color:#393331!important}.vc-hero-premium .vc-chip-row svg{width:25px!important;height:25px!important;stroke:#d39b32!important;fill:none!important;stroke-width:1.7!important;margin-right:9px!important}
+@media(max-width:1100px){.vc-hero-premium .vc-kicker:before,.vc-hero-premium .vc-kicker:after{width:90px!important;flex-basis:90px!important}.vc-hero-metrics-premium{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:680px){.vc-hero.vc-hero-premium{padding:32px 18px!important}.vc-hero-premium .vc-kicker{font-size:.78rem!important;letter-spacing:.16em!important;gap:10px!important}.vc-hero-premium .vc-kicker:before,.vc-hero-premium .vc-kicker:after{width:28px!important;flex-basis:28px!important}.vc-hero-metrics-premium{grid-template-columns:1fr!important}.vc-hero-premium .vc-chip-row{display:grid!important;grid-template-columns:1fr!important}.vc-hero-premium .vc-chip-row span{min-width:0!important;width:100%!important}}
+
+
+/* Strategic Growth badge icons — matched to approved reference */
+.vc-chip-row-icons .chip-icon{
+  width:26px !important;
+  height:26px !important;
+  flex:0 0 26px !important;
+  fill:none !important;
+  stroke:#d39a31 !important;
+  stroke-width:2.2 !important;
+  stroke-linecap:round !important;
+  stroke-linejoin:round !important;
+}
+.vc-chip-row-icons .india-icon{
+  fill:#d39a31 !important;
+  stroke:#d39a31 !important;
+  stroke-width:1.25 !important;
+}
+.vc-chip-row-icons span{
+  gap:12px !important;
+}
+
+/* Exact user-supplied strategic growth icons */
+.vc-chip-row-icons .chip-png-icon{
+  width:30px !important;
+  height:30px !important;
+  object-fit:contain !important;
+  flex:0 0 30px !important;
+  display:block !important;
+}
+.vc-chip-row-icons span{
+  display:flex !important;
+  align-items:center !important;
+  gap:12px !important;
+}
+
+/* Clean, simple font for Strategic Growth KPI values */
+.vc-card-value,
+.vc-metric-value,
+.vc-stat-value,
+.vc-growth-card .value,
+.vc-growth-card .amount,
+.vc-growth-card strong,
+.vc-growth-card b {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* FINAL OVERRIDE — simple font for the four Strategic Growth card values */
+.vc-hero-metrics-premium article .metric-head strong,
+.vc-hero-metrics-premium article strong {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.05 !important;
+}
+
+/* FINAL TYPOGRAPHY — Playfair Display Bold for red Strategic Growth values */
+.vc-hero-metrics-premium article .metric-head strong,
+.vc-hero-metrics-premium article strong {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.05 !important;
+}
+
+/* FINAL TYPOGRAPHY — match Inventory & Working Capital heading style */
+.vc-hero-metrics-premium article .metric-head strong,
+.vc-hero-metrics-premium article strong {
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.05 !important;
+}
+
+/* Final font match: red strategic-growth card values match reference image */
+.vc-hero-metrics-premium article .metric-head strong,
+.vc-hero-metrics-premium article strong {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  letter-spacing: -0.02em !important;
+}
+
+
+/* =========================================================
+   PAN-INDIA EXPANSION MAP — CITY DETAIL VERSION
+   ========================================================= */
+.city-map-card{
+  padding:12px !important;
+  background:linear-gradient(145deg,#fffaf4,#f5e8dd) !important;
+  overflow:hidden !important;
+}
+.real-india-map.city-india-map{
+  width:100% !important;
+  max-width:760px !important;
+  aspect-ratio:auto !important;
+  margin:0 auto !important;
+}
+.real-india-map.city-india-map > img{
+  width:100% !important;
+  height:auto !important;
+  object-fit:contain !important;
+  display:block !important;
+  filter:none !important;
+  border-radius:18px !important;
+  animation:none !important;
+}
+@media(max-width:680px){
+  .city-map-card{padding:6px !important;}
+  .real-india-map.city-india-map > img{border-radius:14px !important;}
+}
+
+
+/* =========================================================
+   LARGE PAN-INDIA MAP + ANIMATED REGIONAL POINTERS
+   ========================================================= */
+.india-expansion{
+  overflow:visible !important;
+}
+.city-map-card{
+  width:min(100%, 1120px) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  padding:8px !important;
+}
+.real-india-map.city-india-map{
+  position:relative !important;
+  width:100% !important;
+  max-width:1080px !important;
+  margin:0 auto !important;
+  overflow:visible !important;
+}
+.real-india-map.city-india-map > img{
+  width:100% !important;
+  max-width:none !important;
+  height:auto !important;
+}
+
+/* Pulsing overlays sit on top of the four regional markers already in the artwork. */
+.map-pulse{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:#fff8e8;
+  border:4px solid #d79a28;
+  box-shadow:0 0 0 0 rgba(215,154,40,.58);
+  transform:translate(-50%,-50%);
+  z-index:4;
+  pointer-events:none;
+  animation:mapPulse 1.8s ease-out infinite;
+}
+.map-pulse::after{
+  content:"";
+  position:absolute;
+  inset:-8px;
+  border:2px solid rgba(215,154,40,.65);
+  border-radius:50%;
+  animation:mapRing 1.8s ease-out infinite;
+}
+
+/* Positions are relative to the city-map artwork. */
+.map-pulse-north{ left:37.4%; top:22.5%; animation-delay:0s; }
+.map-pulse-west { left:22.4%; top:50.7%; animation-delay:.35s; }
+.map-pulse-east { left:67.1%; top:48.9%; animation-delay:.70s; }
+.map-pulse-south{ left:46.8%; top:75.6%; animation-delay:1.05s; }
+
+@keyframes mapPulse{
+  0%   { box-shadow:0 0 0 0 rgba(215,154,40,.62); transform:translate(-50%,-50%) scale(.92); }
+  45%  { box-shadow:0 0 0 15px rgba(215,154,40,0); transform:translate(-50%,-50%) scale(1.08); }
+  100% { box-shadow:0 0 0 22px rgba(215,154,40,0); transform:translate(-50%,-50%) scale(.92); }
+}
+@keyframes mapRing{
+  0%   { transform:scale(.55); opacity:.9; }
+  70%  { transform:scale(1.55); opacity:0; }
+  100% { transform:scale(1.55); opacity:0; }
+}
+
+@media(max-width:900px){
+  .city-map-card{ width:100% !important; }
+  .real-india-map.city-india-map{ max-width:900px !important; }
+  .map-pulse{ width:14px; height:14px; border-width:3px; }
+}
+@media(max-width:680px){
+  .city-map-card{ padding:3px !important; }
+  .map-pulse{ width:11px; height:11px; border-width:2px; }
+  .map-pulse::after{ inset:-5px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .map-pulse,.map-pulse::after{ animation:none !important; }
+}
+
+
+/* =========================================================
+   MAP POINTER ALIGNMENT — preserve existing map size/layout
+   ========================================================= */
+.real-india-map.city-india-map{
+  position:relative !important;
+}
+
+/* Center pulses precisely over the four regional target markers. */
+.real-india-map.city-india-map .map-pulse-north{
+  left:37.25% !important;
+  top:24.15% !important;
+}
+.real-india-map.city-india-map .map-pulse-west{
+  left:22.55% !important;
+  top:51.05% !important;
+}
+.real-india-map.city-india-map .map-pulse-east{
+  left:67.15% !important;
+  top:49.55% !important;
+}
+.real-india-map.city-india-map .map-pulse-south{
+  left:46.85% !important;
+  top:76.05% !important;
+}
+
+/* Keep all pulse rings centered on the same point. */
+.real-india-map.city-india-map .map-pulse,
+.real-india-map.city-india-map .map-pulse::after{
+  transform-origin:center center !important;
+}
+
+
+/* =========================================================
+   PRECISE MAP POINTER ALIGNMENT
+   Exact centres measured from the underlying map artwork.
+   ========================================================= */
+.real-india-map.city-india-map .map-pulse-north{
+  left:37.85% !important;
+  top:23.09% !important;
+}
+.real-india-map.city-india-map .map-pulse-west{
+  left:23.17% !important;
+  top:50.85% !important;
+}
+.real-india-map.city-india-map .map-pulse-east{
+  left:66.93% !important;
+  top:48.97% !important;
+}
+.real-india-map.city-india-map .map-pulse-south{
+  left:47.11% !important;
+  top:75.30% !important;
+}
+
+
+/* =========================================================
+   FINAL POINTER ALIGNMENT — corrected Latur map
+   Exact centers measured from the actual map PNG.
+   ========================================================= */
+.real-india-map.city-india-map{
+  position:relative !important;
+}
+
+.real-india-map.city-india-map .map-pulse-north{
+  left:37.6013% !important;
+  top:20.5882% !important;
+}
+.real-india-map.city-india-map .map-pulse-west{
+  left:23.2577% !important;
+  top:49.6863% !important;
+}
+.real-india-map.city-india-map .map-pulse-east{
+  left:65.8428% !important;
+  top:48.9804% !important;
+}
+.real-india-map.city-india-map .map-pulse-south{
+  left:49.1896% !important;
+  top:73.9216% !important;
+}
+
+/* Keep the animation centered exactly on the marker. */
+.real-india-map.city-india-map .map-pulse{
+  transform:translate(-50%,-50%) !important;
+  transform-origin:center center !important;
+}
+.real-india-map.city-india-map .map-pulse::after{
+  transform-origin:center center !important;
+}
