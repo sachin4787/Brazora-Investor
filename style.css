@@ -2505,3 +2505,29 @@ footer{
 .real-india-map.city-india-map .map-pulse::after{
   transform-origin:center center !important;
 }
+
+/* =========================================================
+   FINAL TYPOGRAPHY UPDATE — CORMORANT GARAMOND BOLD (700)
+   Applies to the three approved investor-section type groups.
+   ========================================================= */
+
+/* 1) 30/60/90-day phase headings */
+.vc-timeline article h4,
+.vc-timeline h4 {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* 2) Capital-pillar detail heading (e.g. Inventory & Working Capital) */
+.fund-panel h4 {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-weight: 700 !important;
+}
+
+/* 3) Red investor metric values */
+.vc-hero-metrics-premium article .metric-head strong,
+.vc-hero-metrics-premium article strong,
+.vc-hero-metrics-premium strong {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-weight: 700 !important;
+}
