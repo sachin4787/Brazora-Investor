@@ -2438,3 +2438,41 @@ footer{
 .real-india-map.city-india-map .map-pulse::after{
   transform-origin:center center !important;
 }
+
+/* Costing Summary GST grand total only */
+.cost-gst-grand-total th {
+  background: #f4dda4;
+  color: #650a0f;
+  font-weight: 700;
+}
+.cost-gst-grand-total th:first-child {
+  text-align: left;
+}
+
+/* Costing Summary notes */
+.costing-notes {
+  margin-top: 14px;
+}
+.costing-notes p {
+  margin: 5px 0;
+}
+
+/* Refined Costing Summary notes — match former footnote styling */
+.costing-notes {
+  margin-top: 14px;
+  color: #7a6a64;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 400;
+}
+.costing-notes p {
+  margin: 4px 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.costing-notes strong {
+  color: inherit;
+  font-size: inherit;
+  font-weight: 700;
+}
