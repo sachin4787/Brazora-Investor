@@ -2476,3 +2476,32 @@ footer{
   font-size: inherit;
   font-weight: 700;
 }
+
+/* =========================================================
+   FINAL POINTER ALIGNMENT — Gujarat/Ahmedabad/Surat map
+   Exact marker centres measured from the current map asset
+   (1150 x 1367 px).
+   ========================================================= */
+.real-india-map.city-india-map .map-pulse-north{
+  left:41.1652% !important;
+  top:19.4440% !important;
+}
+.real-india-map.city-india-map .map-pulse-west{
+  left:25.5130% !important;
+  top:51.4850% !important;
+}
+.real-india-map.city-india-map .map-pulse-east{
+  left:67.5652% !important;
+  top:47.0080% !important;
+}
+.real-india-map.city-india-map .map-pulse-south{
+  left:52.9565% !important;
+  top:72.0263% !important;
+}
+.real-india-map.city-india-map .map-pulse{
+  transform:translate(-50%,-50%) !important;
+  transform-origin:center center !important;
+}
+.real-india-map.city-india-map .map-pulse::after{
+  transform-origin:center center !important;
+}
