@@ -1,12 +1,6 @@
 const yearEl=document.getElementById('year'); if(yearEl) yearEl.textContent=new Date().getFullYear();
 const toggle=document.querySelector('.menu-toggle'), nav=document.getElementById('nav');
-function closeMenu(){nav?.classList.remove('open');toggle?.setAttribute('aria-expanded','false');toggle?.setAttribute('aria-label','Open menu');}
-if(toggle&&nav){
- toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close menu':'Open menu');});
- nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{closeMenu();nav.querySelectorAll('details').forEach(d=>d.open=false);}));
- document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(nav.classList.contains('open')){closeMenu();toggle.focus();}nav.querySelectorAll('details').forEach(d=>d.open=false);}});
- document.addEventListener('click',e=>{if(!e.target.closest('.site-header')){closeMenu();nav.querySelectorAll('details').forEach(d=>d.open=false);}});
-}
+if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')))}
 const products={
  treatment:{
   title:'Batana Plex Treatment', image:'assets/treatment-popup.png',
@@ -43,10 +37,8 @@ const products={
  }
 };
 const modal=document.getElementById('productModal');
-let productTrigger = null;
 function openProduct(key){
  const p=products[key]; if(!p||!modal)return;
- productTrigger=document.activeElement;
  document.getElementById('modalTitle').textContent=p.title;
  document.getElementById('modalImage').src=p.image;
  document.getElementById('modalImage').alt=p.title;
@@ -55,10 +47,8 @@ function openProduct(key){
  document.getElementById('modalUsp').innerHTML=p.usp.map(x=>`<li>${x}</li>`).join('');
  const note=document.getElementById('modalNote'); note.textContent=p.note||''; note.hidden=!p.note;
  modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
- document.querySelector('main').inert=true;document.querySelector('header').inert=true;
- modal.querySelector('.modal-close').focus();
 }
-function closeModal(){if(!modal||!modal.classList.contains('open'))return;document.querySelector('main').inert=false;document.querySelector('header').inert=false;modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';productTrigger?.focus();}
+function closeModal(){if(!modal)return;modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
 document.querySelectorAll('.product-open').forEach(btn=>btn.addEventListener('click',()=>openProduct(btn.closest('.product-card').dataset.product)));
 document.querySelectorAll('[data-close-modal]').forEach(el=>{el.addEventListener('click',closeModal);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();closeModal()}})});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 // Lightweight revenue/profit chart using the PPT monthly values.
@@ -164,24 +154,4 @@ const parts = mixValues.map((v,i)=>{
 const salesMix = document.getElementById('actualSalesMix');
 if(salesMix){
   salesMix.style.background='conic-gradient('+parts.join(',')+')';
-}
-
-// Keep product details contained in the keyboard focus order.
-modal?.addEventListener('keydown',e=>{
- if(e.key!=='Tab')return;
- const items=[...modal.querySelectorAll('button,a[href],input,select,textarea,[tabindex="0"]')].filter(el=>el.getClientRects().length);
- const first=items[0],last=items[items.length-1];
- if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
- else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
-});
-// Tables remain horizontally scrollable and keyboard accessible.
-document.querySelectorAll('.table-wrap').forEach(el=>{el.tabIndex=0;el.setAttribute('role','region');el.setAttribute('aria-label',(el.closest('.data-card')?.querySelector('h3')?.textContent||'Financial data')+' — scroll to view all columns');});
-document.querySelectorAll('img').forEach(img=>{if(!img.closest('.hero,.site-header'))img.loading='lazy';});
-if('IntersectionObserver' in window){
- const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{if(!entry.isIntersecting)return;
-   document.querySelectorAll('.nav a').forEach(a=>{const active=a.hash==='#'+entry.target.id;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
-  });
- },{rootMargin:'-15% 0px -65% 0px',threshold:0});
- document.querySelectorAll('main section[id]').forEach(el=>observer.observe(el));
 }
