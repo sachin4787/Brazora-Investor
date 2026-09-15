@@ -11,32 +11,33 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&amp;family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="style.css?v=cormorant-bold-3-groups" rel="stylesheet"/>
+<link href="ux.css?v=20260915" rel="stylesheet"/>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header" id="top">
 <a aria-label="Brazora home" class="brand" href="#home">
 <span aria-hidden="true" class="brand-logo-crop"></span>
 <span class="brand-name"><strong>BRAZORA</strong><small>HAIR &amp; SKINCARE</small></span>
 </a>
-<button aria-expanded="false" aria-label="Open menu" class="menu-toggle">☰</button>
-<nav class="nav" id="nav">
-<a class="active" href="#home">HOME</a>
-<a href="#about">ABOUT US</a><a href="#why-brazora">WHY BRAZORA</a>
-<a href="#products">PRODUCTS</a>
-<a href="#batana">BATANA STORY</a>
-<a href="#results">RESULTS</a><a href="#investor">INVESTOR</a>
-<a href="#growth">MARKETING &amp; GROWTH</a>
-<a href="#directors">TEAM</a>
-<a href="#financials">FINANCIALS</a>
+<button aria-expanded="false" aria-label="Open menu" aria-controls="nav" class="menu-toggle">☰</button>
+<nav aria-label="Main navigation" class="nav" id="nav">
+<a class="active" href="#home">Home</a>
+<a href="#products">Our products</a>
+<a href="#batana">Batana story</a>
+<a href="#results">Results</a>
+<details class="nav-more"><summary>Our company</summary><div class="nav-dropdown">
+<a href="#about">About Brazora</a><a href="#why-brazora">Why Brazora</a><a href="#growth">Marketing &amp; growth</a><a href="#directors">Our team</a><a href="#financials">Financials</a>
+</div></details>
+<a class="nav-investor" href="#investor">Investor overview</a>
 </nav>
 </header>
-<main>
+<main id="main">
 <section class="hero" id="home">
 <div class="hero-copy">
 <img alt="Brazora Hair &amp; Skincare logo" class="hero-brazora-logo" src="assets/brazora-logo-gold.png"/>
 <p class="eyebrow">SCIENCE <i>•</i> CARE <i>•</i> RESULTS</p>
-<h1>Crafted for<br/><em>Excellence.</em></h1>
-<h2>Designed to redefine<br/>Haircare.</h2>
+<h1>Exceptional care.<br/><em>Beautiful hair.</em></h1>
 <p class="hero-text">
       Premium haircare solutions crafted to nourish, repair and transform —
       built for salons, professionals and consumers.
@@ -47,7 +48,7 @@
 </div>
 </div>
 <div class="hero-art">
-<img alt="Brazora haircare collection" src="assets/home-front.png"/>
+<img alt="Brazora haircare collection" fetchpriority="high" src="assets/home-front.png"/>
 </div>
 </section>
 <section class="trust-strip">
@@ -412,7 +413,7 @@ The capital will be deployed to strengthen market penetration, channel productiv
 <article><span>04</span><h3>Phase 4</h3><ul class="phase-detail-list"><li>Coupons for Consumers from Salon Visits</li><li>Social Media Promotion or Tag Discounts</li><li>Increase the Sales Force for better reach</li><li>Fun activities with Salon Partners, including client Takeaway Kits</li></ul></article>
 </div>
 </section>
-<div aria-hidden="true" class="modal" id="productModal"><div class="modal-backdrop" data-close-modal=""></div><div aria-labelledby="modalTitle" aria-modal="true" class="modal-dialog" role="dialog"><span aria-label="Close" class="modal-close" data-close-modal="" role="button" tabindex="0">×</span><div class="modal-product"><div class="modal-image-panel"><img alt="" id="modalImage" src=""/></div><div class="modal-content"><div class="section-kicker">BRAZORA PROFESSIONAL RANGE</div><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="modal-highlights" id="modalHighlights"></div><h3>Key Benefits &amp; USPs</h3><ul class="modal-usp" id="modalUsp"></ul><p class="modal-note" hidden="" id="modalNote"></p></div></div></div></div>
+
 </main>
 <!-- Batana Story moved to final deck -->
 <!-- Team / Leadership moved immediately before Batana Story -->
@@ -507,6 +508,7 @@ The capital will be deployed to strengthen market penetration, channel productiv
 <p>© <span id="year"></span> Brazora Hair &amp; Skincare. All rights reserved.</p>
 <a href="#top">Back to top ↑</a>
 </footer>
-<script src="script.js"></script>
+<script defer src="script.js?v=20260915"></script>
+<div aria-hidden="true" class="modal" id="productModal"><div class="modal-backdrop" data-close-modal=""></div><div aria-labelledby="modalTitle" aria-modal="true" class="modal-dialog" role="dialog"><button type="button" aria-label="Close product details" class="modal-close" data-close-modal="">×</button><div class="modal-product"><div class="modal-image-panel"><img alt="" id="modalImage" src=""/></div><div class="modal-content"><div class="section-kicker">BRAZORA PROFESSIONAL RANGE</div><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="modal-highlights" id="modalHighlights"></div><h3>Key Benefits &amp; USPs</h3><ul class="modal-usp" id="modalUsp"></ul><p class="modal-note" hidden="" id="modalNote"></p></div></div></div></div>
 </body>
 </html>
